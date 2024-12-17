@@ -13,7 +13,7 @@ require_once 'config/db.php';
 <body>
   <h1>Bienvenido <?= htmlspecialchars($_SESSION['user_name'])?> </h1>
   <ul>
-    <li> <a href="user/list.php">Gestion de Usuarios</a></li>
+    <li> <a href="users/list.php">Gestion de Usuarios</a></li>
     <li> <a href="products/list.php">Gestion de Productos</a></li>
     <li> <a href="cities/list.php">Gestion de Ciudades</a></li>
     <li> <a href="orders/list.php">Gestion de Pedidos</a></li>

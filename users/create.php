@@ -7,9 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $role = $_POST['role'];
+    $phone = $_POST['phone'];
 
-    $query = $conn->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
-    $query->execute([$name, $email, $password, $role]);
+    $query = $conn->prepare("INSERT INTO users (name, email, phone ,password, role) VALUES (?, ?, ?, ?,?)");
+    $query->execute([$name, $email, $phone, $password, $role]);
 
     header('Location: list.php');
     exit;
@@ -30,6 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <label for="email">Email:</label>
         <input type="email" name="email" required><br>
+        
+        <label for="email">Teléfono:</label>
+        <input type="phone" name="phone" required><br>
 
         <label for="password">Contraseña:</label>
         <input type="password" name="password" required><br>

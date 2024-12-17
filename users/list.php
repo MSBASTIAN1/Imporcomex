@@ -17,6 +17,7 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
   <h1>Usuarios</h1>
   <a href="create.php">Crear Usuario</a>
     <tr>
+      <th>Id</th>
       <th>Nombre</th>
       <th>Email</th>
       <th>Telefono</th>
